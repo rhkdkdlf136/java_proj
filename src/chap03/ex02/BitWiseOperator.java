@@ -58,6 +58,7 @@ public class BitWiseOperator {
 		System.out.println("평균 출력 : " + Double.parseDouble(avg)); //입력한 문자열 숫자를 실수로 변형.
 		
 		
+//		
 		
 		
 
