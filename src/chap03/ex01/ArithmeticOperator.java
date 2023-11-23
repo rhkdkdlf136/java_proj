@@ -41,7 +41,7 @@ public class ArithmeticOperator {
 		int val1 = 3;
 		System.out.println( ++val1 ); // 4 <= 값을 증가후 출력
 		System.out.println( val1++ ); // 4
-		System.out.println( val1 );
+		System.out.println( val1 ); //5
 		System.out.println( --val1 ); // 4
 		System.out.println( val1-- ); // 4
 		System.out.println( val1 ); // 3
