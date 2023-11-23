@@ -1,5 +1,7 @@
 package chap04.ex01;
 
+import java.util.Scanner;
+
 public class If_Statement {
 
 	public static void main(String[] args) {
@@ -18,7 +20,7 @@ public class If_Statement {
 		
 		
 //		if (3가지 구문)
-//		1. 조건이 1개 일 때 
+//		1. 조건이 1개 일 때 <= 삼항연산자로 수정 가능. ' (조건)? 참:거짓; '
 //			if (조건) {
 //	 			조건이 true 일 때 실행문;
 //			} else {
@@ -46,24 +48,64 @@ public class If_Statement {
 		int a = 10;
 		
 		if ( a > 30 ) {
-			System.out.println(" 참입니다. "); // 조건이 참이면 실행
+			System.out.println("참입니다."); // 조건이 참이면 실행
+			
+			
+			System.out.println("참일 때 또 실행됩니다.");
 		} else {
-			System.out.println(" 거짓입니다. "); // 조건이 거짓이면 실행
+			System.out.println("거짓입니다."); // 조건이 거짓이면 실행
 		}
-		System.out.println(" 프로그램 종료입니다. ");
+		System.out.println("프로그램 종료입니다.");
 		
 
-	
+//		조건이 여러개 일 때 : 
+//			점수가 90점 이상일 때 : A 학점
+//			점수가 80점 이상일 때 : B 학점
+//			점수가 70점 이상일 때 : C 학점
+
+		
+//		int score; //점수입력시
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("점수를 입력하세요>>>");
+//		score = sc.nextInt();
+		int score = 90;
+		
+		if (score >= 90) {
+			System.out.println("A 학점입니다");
+		} else if (score >= 80) {
+			System.out.println("B 학점입니다");
+		} else if (score >= 70) {
+			System.out.println("C 학점입니다");
+		} else if (score >= 60) {
+			System.out.println("D 학점입니다");
+		} else {
+			System.out.println("F 학점입니다");
+		}
 		
 		
+		System.out.println("if 조건에서 조건처리=========================");
+		
+		score = 90;
+		// && 앞,뒤 조건 모두가 true여야 동작한다.
+		if (score >= 60 && score <70) { // true && false == false
+			System.out.println("D 학점입니다");
+		} else if (score >= 70 && score < 80) { // true && false == false
+			System.out.println("C 학점입니다");
+		} else if (score >= 80 && score < 90) { // true && false == false
+			System.out.println("B 학점입니다");
+		} else if (score >= 90 && score <= 100) { //true && true = true
+			System.out.println("A 학점입니다");
+		} else {
+			System.out.println("F 학점입니다");
+		}
 		
 		
+		System.out.println("========================");
+//		조건이 true 일 때만 실행 : 중괄호를 넣어도 되고 생략할 수도 있다.
+ 		if ( 10 > 5 ) { System.out.println("참입니다."); } 
 		
-		
-		
-		
-		
-		
+ 		if (10 > 5 ) System.out.println("10은 5보다 큽니다"); //중괄호 생략할 수 있다
+ 		
 		
 		
 		
