@@ -74,7 +74,7 @@ public class Array_Definition {
 		
 		
 		
-		System.out.println("============================================");
+System.out.println("============================================");
 		
 		String[] arr9 = {"아버님", "어머님", "형제", "동생"};
 //		            index  0	   1	   2 	  3번 
@@ -95,6 +95,21 @@ public class Array_Definition {
 		for (int i = 0; i < arr9.length; i++) { // arr9.length : 방의 개수
 			System.out.println(arr9[i]);
 		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
