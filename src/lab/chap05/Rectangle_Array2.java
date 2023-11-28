@@ -23,8 +23,8 @@ public class Rectangle_Array2 {
 
 		//1.배열 선언
 		int[][] arr = new int[5][10];
-//		System.out.println(arr.length); // 행의 개수(arr은 2차원 배열) 
-//		System.out.println(arr[0].length); // [0]번 행의 열의 개수
+		System.out.println(arr.length); // 행의 개수(arr은 2차원 배열) 
+		System.out.println(arr[0].length); // [0]번 행의 열의 개수
 		
 		//2.값을 입력: 이중for문
 //			-바깥쪽 for : 행을 이동
