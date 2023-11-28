@@ -69,6 +69,11 @@ System.out.println("5.출력 : 향상된 for문으로 출력================");
 			}
 			System.out.println();
 		}
+		
+		//방법 2.
+		for (int[] a : arr1) {
+			System.out.println(Arrays.toString(a));
+		}
 
 		
 		

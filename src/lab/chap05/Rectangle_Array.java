@@ -29,9 +29,9 @@ public class Rectangle_Array {
 		int[][] arr = new int[3][10];
 		
 		System.out.println(arr.length); //행의 개수 : 3
-		System.out.println(arr[0].length); //열의 개수 : 10
-		System.out.println(arr[1].length);
-		System.out.println(arr[2].length);
+//		System.out.println(arr[0].length); //열의 개수 : 10
+//		System.out.println(arr[1].length);
+//		System.out.println(arr[2].length);
 
 		
 System.out.println("이중 for문 사용해서 값을 입력 ===========================");
@@ -40,7 +40,7 @@ System.out.println("이중 for문 사용해서 값을 입력 ===================
 //			System.out.println("행의 방번호 : " + i);
 //				System.out.println("i : " + i + " , j : " + j);
 			
-				if ( i == 0 ) { //i행이 0일 때, 배열 각방에 1씩 증가
+				if ( i == 0 ) { //i행이 0행일 때, 배열 각방에 1씩 증가
 					int a = 1;
 					for(int j = 0; j < arr[i].length; j++) {
 						arr[i][j] = a;
@@ -48,7 +48,7 @@ System.out.println("이중 for문 사용해서 값을 입력 ===================
 //						System.out.print(arr[i][j] + "\t"); //출력 확인용
 					}
 					
-				} else if (i == 1) { //i행이 1일 때, 각 방에 3의 배수 저장
+				} else if (i == 1) { //i행이 1행일 때, 각 방에 3의 배수 저장
 					int a = 3;
 					for(int j = 0; j < arr[i].length; j++) {
 						arr[i][j] = a;
@@ -56,7 +56,7 @@ System.out.println("이중 for문 사용해서 값을 입력 ===================
 //						System.out.print(arr[i][j] + "\t");
 					}
 					
-				} else if (i == 2) { //i행이 2일 때, 7과 8의 배수 저장
+				} else if (i == 2) { //i행이 2행일 때, 7과 8의 배수 저장
 					int a = 1;
 					for(int j = 0; j < arr[i].length; a++) { // 증감식이 ' a++ ' 인 점 확인.
 						if ( a % 7 == 0 || a % 8 == 0) {
@@ -70,12 +70,29 @@ System.out.println("이중 for문 사용해서 값을 입력 ===================
 			
 			
 		}
-		
+		//
 		System.out.println("=============================");
 		for( int i = 0; i < arr.length; i++) {
 			System.out.println(  Arrays.toString(arr[i])  );
 		}
 		
+		
+		//
+//		for(int i=0; i<arr.length; i++) {
+//			for(int j=0; j<arr[i].length;j++) {
+//				System.out.print(arr[i][j]+"\t");
+//			}
+//			System.out.println();
+//		}
+		
+		
+		//
+//		for(int[] a : arr) {
+//			for(int b : a) {
+//				System.out.print(b+"\t");
+//			}
+//			System.out.println();
+//		}
 		
 		
 		
