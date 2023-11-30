@@ -70,7 +70,7 @@ public class Method {
 	}
 	
 	
-	void sMethod(Student s) { //Student객체의 s를 던져주면 그 객체안의 메소드 hapAvg() 호출
+	void sMethod(Student s) { //Student객체의 s객체를 던져주면 그 객체안의 메소드 hapAvg() 호출
 		s.hapAvg();
 	}
 	

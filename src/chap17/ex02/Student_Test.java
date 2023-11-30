@@ -73,7 +73,20 @@ System.out.println("====================================");
 		
 		m.all(aList); // Method클래스 All() 메소드 호출
 		
+		System.out.println("====================================");
 		m.sMethod(new Student("박순신", 77, 55, 90));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 
