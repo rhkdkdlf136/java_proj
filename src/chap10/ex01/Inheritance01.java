@@ -102,14 +102,14 @@ public class Inheritance01 {
 		
 		System.out.println("※Type Casting ==================================================="); 
 //		※Type Casting :
-//			Up Casting : 자동 적용될 수 있다. 자식타입에서 부모타입으로. 부모의 필드와 메소드만 사용 가능
+//			Up Casting : 자동 적용될 수 있다. 자식타입에서 부모타입으로. 부모타입의 필드와 메소드만 사용 가능
 //			Down Casting: 부모에서 자식으로. 명시가 필요. 부모와 자식의 필드와 메소드를 모두 사용 가능
 
 		
 //		자식 객체를 생성해서 부모타입으로 지정함 : 부모의 필드와 메소드만 사용가능
 		//호출 : 1.Chird 호출 -> 2.Professor 호출 -> 3.Human 호출
 		//생성 : 4.Human 생성 -> 5.Professor 생성 -> 6.Chird 생성
-		Human ch01 = new Chird(); // ch01 객체 : Human,Professor,Chird클래스를 내포하고 있지만, 타입자체가 Human이니 Human클래스의 필드와 메소드만 사용할 수 있다
+		Human ch01 = new Chird(); // ch01 객체 : Human,Professor,Chird클래스를 내포하고 있지만, '타입자체가 Human이니' Human클래스의 필드와 메소드만 사용할 수 있다
 		//Human 타입(Type) : Human의 필드와 메소드만 사용가능 함.
 		//new 'chird'를 객체화함
 		
@@ -119,10 +119,10 @@ public class Inheritance01 {
 		
 		
 		
-//		다운캐스팅 : Human, Professor의 필드와 메소드를 사용 가능
+//		§다운캐스팅 : Human, Professor의 필드와 메소드를 사용 가능
 		Professor pp1 = (Professor) ch01; 
 	  // Type(타입)               객체화
-		//ch01은 Human타입으로 되어 있는데 다운캐스팅을 통해 ' (Professor) '타입으로 변경했다.
+		//'ch01은 Human타입'으로 되어 있는데 다운캐스팅을 통해 ' (Professor) '타입으로 변경했다.
 		
 		//Human
 		pp1.age = 10;
@@ -130,7 +130,7 @@ public class Inheritance01 {
 		pp1.professorId = 30;
 		
 		
-		System.out.println();
+		System.out.println("==다시 다운캐스팅하면... Human, Professor, Chird의 필드와 메소드 사용가능. ===");
 		//다시 다운캐스팅하면... Human, Professor, Chird의 필드와 메소드 사용가능.
 		Chird ch05 = (Chird) pp1;
 		           //' (Chird) ' 명시해서 다운캐스팅
@@ -144,24 +144,25 @@ public class Inheritance01 {
 		
 		
 		//업캐스팅 : 명시를 하지 않더라도 자동으로 작동된다.
-		Human h01 = ch05; //ch05는 Chird타입이였는데 업캐스팅(Human)하였다. 따로 ch05앞에 (Human) 입력 안해도 된다.
+		Human h01 = ch05; //ch05는 'Chird타입'이였는데 '업캐스팅(Human)'하였다. 따로 ch05앞에 (Human) 입력 안해도 된다.
 		// h01 : Human, Professor, Chird
 		
 		
-//		Human클래스를 객체화해서 Human타입 : Human만 가지고 있다
-		Human hh01 = new Human(); // hh01은 Human객체화하여 Human타입만 가지고 있다.(Professor, Chird 는 없다)
-		//Human타입으로    new Human으로 객체화해서
+//		Human클래스를 객체화해서 Human타입 : 'Human만' 가지고 있다
+		Human hh01 = new Human(); // hh01은 'Human객체화'하여 'Human타입만' 가지고 있다.(Professor, Chird 는 없다)
+	 //Human타입으로   new Human으로 객체화해서
 		
 		//Human
 		hh01.age = 40;
 		
+		
 //		Professor pp02 = (Professor) hh01; //실행시 오류 : ClassCastException
-		//hh01은 Human타입으로 Human을 객체화했기 때문에 Human밖에 없다. Professor타입을 내포하고 있지않아서 실행시 오류발생!
+		//hh01은 'Human타입'으로 'Human을 객체화'했기 때문에 'Human밖에' 없다. 'Professor타입'을 내포하고 있지 않아서 실행시 오류발생!
 		
 		
-//		Professor 를 객체화해서 Human타입으로 지정
+//		Professor 를 객체화해서 'Human타입'으로 지정
 		Human ppp01 = new Professor();
-		//ppp01객체는 Human타입(Professor 내포. Chird는 내포xxx)으로 Professor로 객체화했기 때문에 부모인 Human과 Professor만 내포함.
+		//ppp01객체는 'Human타입(Professor 내포. Chird는 내포xxx)'으로 Professor로 객체화했기 때문에 부모인 Human만 내포함.
 		
 		//Human
 		ppp01.name = "김길동";
@@ -179,15 +180,17 @@ public class Inheritance01 {
 //		Chird ch33 = (Chird) ppp02; // (현재 Professor타입인)ppp02엔 'Chird타입'이 없기 때문에 실행시 오류 발생한다
 									//실행시 오류 발생 : ClassCastException
 		
+		
+		
 		//삼항연산자
 		Chird ch44 = (ppp02 instanceof Chird) ? (Chird) ppp02 : null;
 		           //         true,false라면             참     : 거짓
-		           // ppp02에 Chird타입이 있다면...
+		           // ppp02(Professor타입)에 Chird타입이 있다면...
 		          //'  객체 instanceof 타입  ' : 객체에 타입이 존재하는지 여부
 		System.out.println(ch44); // ppp02에 Chird타입이 없으니 'null' 출력.
 		
 		
-		//Chird를 객체화해서 Chird타입으로 지정하면 Human,Professor,Chird 전부 내포(자신과 부모에 있는 모든 필드와 메소드 사용할 수 있다). 
+		//Chird를 객체화해서 'Chird타입'으로 지정하면 'Human,Professor,Chird' 전부 내포(자신과 부모에 있는 모든 필드와 메소드 사용할 수 있다). 
 		Chird cc01 = new Chird();
 		
 		//Human
@@ -197,12 +200,15 @@ public class Inheritance01 {
 		//Child
 		cc01.chirdName = "손자";
 		
-		Professor p100 = cc01; //자식타입(Chird)을 부모타입인 Professor로 업캐스팅 (업캐스팅하려는 cc01앞에 명시 안해도 된다)
+		
+		Professor p100 = cc01; //자식타입(Chird)을 부모타입인 Professor로 업캐스팅. (업캐스팅하려는 cc01앞에 명시 안해도 된다)
 		
 		Human hh100 = p100; // 자식타입(Professor)을 부모타입인 Human으로 업캐스팅.  (다운캐스팅은 명시해줘야한다.)
 		
 		Chird cc100 = (Chird) hh100; //Human타입인 hh100 을 자식타입 Chird로 다운캐스팅
+									//Chird를 객체화해서 'Chird타입'으로 지정하면 'Human,Professor,Chird' 전부 내포(자신과 부모에 있는 모든 필드와 메소드 사용할 수 있다). 
 		cc100.age = 90;
+		
 		
 		//' cc100. ' 입력하면 자동으로 쓸 수 있는 필드,메소드 목록을 팝업해준다.
 		

@@ -1,4 +1,4 @@
-package lab.ch10;
+package lab.chap10;
 
 public class Dog extends Animal{ //Animal 자식
 
