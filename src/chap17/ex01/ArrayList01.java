@@ -38,8 +38,9 @@ public class ArrayList01 {
 		}
 		System.out.println();
 		System.out.println(arr1.length);
+		
 //		배열에서 특정방의 값을 삭제 <= 자동으로 줄어들지 않는다. 방크기도 줄어들지 않는다.
-		arr1[2] = null; // 스트링이기 때문에 null을 넣어서 방값을 초기화
+		arr1[2] = null; // 스트링이기 때문에 ' null '을 넣어서 '방값을 초기화'
 		arr1[3] = null;
 		System.out.println( Arrays.toString(arr1) );
 		System.out.println(arr1.length); //중간에 삭제해도 크기는 줄어들지 않는다
