@@ -11,16 +11,13 @@ public class MovieMenu {
 	MovieMgr myMenu = new MovieMgr();
 	Movie a = new Movie();
 	
-//	List<Movie> movies;
-//	Movie m;
-//	MovieMgr mgr = new MovieMgr();
-	
+
 	MovieMenu(){} //기본 생성자
 	
 	
 	void movieMenu() {
 	//영화 관리 프로그램에 해당하는 메인 메뉴 출력. 
-	//	=> 스캐너로 각 메뉴를 선택해서 반복 출력 되게 한다.
+	//스캐너로 각 메뉴를 선택해서 반복 출력 되게 한다.
 out:do {
 		System.out.println("1.영화 정보 입력");
 		System.out.println("2.영화 정보 전체 검색");
